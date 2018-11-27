@@ -55,6 +55,10 @@ else {
   $URL=""
 }
 
+if ($CREDITS) {
+	$COMMIT_SUBJECT = $COMMIT_SUBJECT + "\n";
+}
+
 $BUILD_VERSION = [uri]::EscapeDataString($env:APPVEYOR_BUILD_VERSION)
 $TIMESTAMP="$(Get-Date -format s)Z"
 $WEBHOOK_DATA="{
